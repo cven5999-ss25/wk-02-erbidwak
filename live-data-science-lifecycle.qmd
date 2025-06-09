@@ -28,6 +28,7 @@ The data is an [excerpt of the Gapminder data](https://www.gapminder.org/data/do
 
 ```{r}
 
+gapminder
 ```
 
 # Data tidying
@@ -89,7 +90,7 @@ ggplot(data = gapminder_yr_2007,
 -   Use a function to display the summary table of median life expectancy by continent.
 
 ```{r}
-
+gapminder_yr_2007 |> kable()
 ```
 
 # Data communication
