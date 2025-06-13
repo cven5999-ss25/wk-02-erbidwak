@@ -11,15 +11,15 @@ Learning reflections are part of your weekly homework and have a weight of 20% o
 
 # Lecture
 
-<!--# Add your reflections on the lecture of this week here -->
+<!--# This week the lecture focus on the introduction to R and the lifecyle of data analysis highlighting the key steps such import, tidy, transform, visualize, model and communicate. Second a handon exercise of using the data analysis tools was done such as opening a file from posit cloud from github, modifying the file and commit and push it back to github -->
 
 # Homework Assignment
 
-<!--# Add your reflections on the homework programming assignment here -->
+<!--# The homework focused on importing, transforming and vizualizing data in R. The data was imported from the folder in github, and pushed back after transformation and visualization.  -->
 
 # Readings
 
-<!--# Add your reflections on the required readings here -->
+<!--# The readings focused on the introduction to R by describing the data analysis using R, what will be covered and what will not. The readings ended with the visualization chapter that discribed the visualization package in R -->
 
 # Submit learning reflections
 
