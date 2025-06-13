@@ -16,9 +16,7 @@ This homework assignment is designed as a guided walkthrough of the data science
 
 As you work through each task, carefully read the step-by-step instructions and identify the corresponding elements in the provided code. This format will help you understand how I will describe coding tasks in future exercises, so pay attention to how each step connects to specific parts of the code.
 
-Your main objectives are to:
-- Run each code chunk and ensure it executes without errors
-- Verify that each step produces the expected results  
+Your main objectives are to: - Run each code chunk and ensure it executes without errors - Verify that each step produces the expected results\
 - Understand the connection between the task descriptions and the code implementation
 
 # Task 0: Load R packages
@@ -49,7 +47,8 @@ library(here)
 **Note:** You will learn more about the use of the `here()` function when we look at data import in more detail.
 
 ```{r}
-global_waste_data <- read_csv(here("wk-02/data/country_level_data_0.csv"))
+global_waste_data <- read_csv(here("data/country_level_data_0.csv"))
+global_waste_data
 ```
 
 # Task 2: Data tidying (and some transformation)
@@ -76,6 +75,7 @@ global_waste_data_small <- global_waste_data |>
          population_population_number_of_people) |> 
   rename(msw_tons_year = total_msw_total_msw_generated_tons_year,
          population = population_population_number_of_people) 
+global_waste_data_small
 ```
 
 # Task 3: Data transformation
@@ -94,14 +94,14 @@ global_waste_data_small <- global_waste_data |>
 
 4.  Describe in your own words what the `mutate()` function does in this code-chunk
 
-<!--# Remove this comment and write your text here -->
+<!--#The mutate() function in the code below creates the "capita_kg_year" varable and assign to it the values of "msw_tons_year/popolation * 1000". In addition it transforms the values of "income_id" from "char" data type into "factor". -->
 
 ```{r}
 global_waste_data_kg_year <- global_waste_data_small |> 
   mutate(capita_kg_year = msw_tons_year / population * 1000) |> 
   mutate(income_id = factor(income_id, 
                             levels = c("HIC", "UMC", "LMC", "LIC")))
-
+global_waste_data_kg_year
 ```
 
 # Task 4: Data visualisation
@@ -122,15 +122,15 @@ global_waste_data_kg_year <- global_waste_data_small |>
 
 4.  Look at the plot that you created and describe what the `mutate()` function achieved in the previous task
 
-<!--# Remove this comment and write your text here -->
+<!--# The mutate fucntion created the new varable named ""msw_tons_year/popolation" that is plot on the y-axis of graph and labeled as MSW generation per capita [kg/yr]  -->
 
 5.  Describe in your own words what the 'color' argument inside the `aes()` does
 
-<!--# Remove this comment and write your text here -->
+<!--# The color argument inside the aes() function style each value of the x-axis. -->
 
 6.  Describe in your own words what the `labs()` function does
 
-<!--# Remove this comment and write your text here -->
+<!--# labs()  function creates and assign labels to the y and x axis -->
 
 ```{r}
 ggplot(data = global_waste_data_kg_year,
